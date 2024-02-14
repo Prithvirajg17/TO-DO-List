@@ -17,7 +17,7 @@
 
 ### Usage:
 1. Clone the repository.
-2. Open `index.html` in a web browser.
+2. Open [index.html](https://github.com/Prithvirajg17/TO-DO-List/blob/main/todo%20list/index.html) in a web browser.
 3. Interact with the todo list:
    - Add tasks by typing in the input field and pressing Enter or clicking the "+" button.
    - Edit tasks by clicking on the task text.
