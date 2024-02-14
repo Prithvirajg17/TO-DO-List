@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  min-height: 400px;
+  padding: 30px;
+  background: white;
+  border: 2px solid #9f9f9fa1;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex: 1;
+  outline: none;
+  padding: 10px 10px 10px 20px;
+  background-color: transparent;
+  border: 2px solid #878787a1;
+  border-radius: 30px;
+  color: #535050;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.todo-input::placeholder {
+  color: #717171;
+}
+
+.edit-btn {
+  background-color: transparent;
+  position: absolute;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  color: rgb(88, 36, 36); /* Change color as needed */
+  right: 70px; /* Adjust the right position as needed */
+}
+
+.edit-btn:hover {
+  color: #ffffff; /* Change hover color as needed */
+}
+
+
+.add-button {
+  border: none;
+  outline: none;
+  background: #ff6a00;
+  color: #ffffff;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+
+.empty-image {
+    width: 100%; 
+    height: 100%;
+}
+
+.todo {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6a00;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  transition: all 0.2s ease;
+}
+
+.todo:first-child {
+  margin-top: 0;
+}
+
+.todo:last-child {
+  margin-bottom: 0;
+}
+
+.todo:hover {
+  background-color:#878080;
+}
+
+.todo label {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+.todo span {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+span::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  margin-left: -30px;
+  border-radius: 100px;
+  border: 2px solid #ffffff;
+}
+
+input[type='checkbox'] {
+  visibility: hidden;
+}
+
+input:checked + span {
+  text-decoration: line-through
+}
+
+.todo:hover input:checked + span::before, input:checked + span::before {
+  background: url(./check.png) 20% 20% no-repeat #09bb21;
+  border-color: #09bb21;
+  background-size: contain;
+}
+
+.todo:hover span::before {
+  border-color: #ffffff;
+}
+
+.todo .delete-btn  {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.todos-container  {
+  height: 300px;
+  overflow: overlay;
+}
+
+.todos-container::-webkit-scrollbar-track  {
+  background: rgb(118, 118, 118);
+  border-radius: 20px
+}
+
+.todos-container::-webkit-scrollbar  {
+  width: 0;
+}
+
+.todos-container:hover::-webkit-scrollbar  {
+  width: 7px;
+}
+
+.todos-container::-webkit-scrollbar-thumb  {
+  background: #d5d5d5;
+  border-radius: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.filter {
+  color: #000000;
+  padding: 7px 15px;
+  border-radius: 100px;
+  border: 2px solid #33ff00a1;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+
+.filter.active, .filter:hover {
+  color: white ;
+  background-color: #5cdb13;
+}
+
+.delete-all {
+  display: flex;
+  color: #000000;
+  border: 2px solid #4dff00;
+  border-radius: 100px;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-all:hover {
+  border-radius: 100px;
+  color: white;
+  border: 2px solid #ff0000;
+  background-color: #f50000;
+}
